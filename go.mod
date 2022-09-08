@@ -24,7 +24,7 @@ require (
 	github.com/containers/image/v5 v5.22.0
 	github.com/containers/kubensmnt v1.2.0
 	github.com/containers/ocicrypt v1.1.5
-	github.com/containers/podman/v4 v4.2.0
+	github.com/containers/podman/v4 v4.2.1
 	github.com/containers/storage v1.42.0
 	github.com/coreos/go-systemd/v22 v22.3.2
 	github.com/cpuguy83/go-md2man v1.0.10
@@ -67,7 +67,7 @@ require (
 	go.opentelemetry.io/otel/sdk v1.9.0
 	golang.org/x/net v0.0.0-20220722155237-a158d28d115b
 	golang.org/x/sync v0.0.0-20220722155255-886fb9371eb4
-	golang.org/x/sys v0.0.0-20220722155257-8c9f86f7a55f
+	golang.org/x/sys v0.0.0-20220823224334-20c2bfdbfe24
 	google.golang.org/grpc v1.49.0
 	k8s.io/api v0.24.2
 	k8s.io/apimachinery v0.24.3
@@ -148,7 +148,7 @@ require (
 	github.com/containerd/go-runc v1.0.0 // indirect
 	github.com/containerd/stargz-snapshotter/estargz v0.12.0 // indirect
 	github.com/containers/libtrust v0.0.0-20200511145503-9c3a6c22cd9a // indirect
-	github.com/containers/psgo v1.7.2 // indirect
+	github.com/containers/psgo v1.7.3 // indirect
 	github.com/coreos/go-oidc/v3 v3.2.0 // indirect
 	github.com/coreos/go-semver v0.3.0 // indirect
 	github.com/coreos/go-systemd v0.0.0-20190719114852-fd7a80b32e1f // indirect
