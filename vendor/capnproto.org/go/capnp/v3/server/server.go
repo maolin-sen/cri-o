@@ -10,7 +10,7 @@ import (
 
 	"capnproto.org/go/capnp/v3"
 	"capnproto.org/go/capnp/v3/exc"
-	"capnproto.org/go/capnp/v3/internal/mpsc"
+	"capnproto.org/go/capnp/v3/exp/mpsc"
 )
 
 // A Method describes a single capability method on a server object.
@@ -203,10 +203,7 @@ func (srv *Server) handleCalls(ctx context.Context) {
 func (srv *Server) handleCall(ctx context.Context, c *Call) {
 	defer srv.wg.Done()
 
-	err := ctx.Err()
-	if err == nil {
-		err = c.method.Impl(ctx, c)
-	}
+	err := c.method.Impl(ctx, c)
 
 	c.recv.ReleaseArgs()
 	if err == nil {
@@ -270,7 +267,7 @@ func sendArgsToStruct(s capnp.Send) (capnp.Struct, error) {
 	if err := s.PlaceArgs(st); err != nil {
 		st.Message().Reset(nil)
 		// Using fmt.Errorf to ensure sendArgsToStruct returns a generic error.
-		return capnp.Struct{}, fmt.Errorf("place args: %v", err)
+		return capnp.Struct{}, fmt.Errorf("place args: %w", err)
 	}
 	return st, nil
 }
