@@ -3,7 +3,7 @@ go 1.19
 module github.com/cri-o/cri-o
 
 require (
-	github.com/BurntSushi/toml v1.2.0
+	github.com/BurntSushi/toml v1.3.2
 	github.com/Microsoft/go-winio v0.5.2
 	github.com/blang/semver/v4 v4.0.0
 	github.com/checkpoint-restore/checkpointctl v0.0.0-20220321135231-33f4a66335f0
